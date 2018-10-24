@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ai.ayushsingla.telephrase.demo"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name">
+        <activity
+            android:name="ai.ayushsingla.telephrase.Demo"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="ai.ayushsingla.telephrase.RecordingService" />
+
+        <receiver android:name="ai.ayushsingla.telephrase.isUnlockedBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.ACTION_SCREEN_ON" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="ai.ayushsingla.telephrase.DismissButtonReceiver" />
+
+        <activity android:name="ai.ayushsingla.telephrase.TrainActivity" />
+        <activity android:name="ai.ayushsingla.telephrase.DetectedActivity" />
+        <activity android:name="ai.ayushsingla.telephrase.AddActivity" />
+        <activity android:name="ai.ayushsingla.telephrase.WebActivity" />
+        <activity android:name="ai.ayushsingla.telephrase.ProxyActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/MyTheme"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#3d79e9"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="225dp">
+    </FrameLayout>
+
+    <Button
+        android:background="@drawable/button_shape"
+        android:backgroundTint="#f9f9f9"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Train Voice Model"
+        android:layout_gravity="center"
+        android:id="@+id/btnTrain"
+    />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp">
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnService"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button_shape"
+        android:backgroundTint="#f9f9f9" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp">
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnTest"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+</LinearLayout>
